@@ -1,2 +1,3 @@
 ﻿  cppsorts.cpp
+C:\Users\Danbo\Documents\GitHub\cppsorts\cppsorts\cppsorts.cpp(80,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   cppsorts.vcxproj -> C:\Users\Danbo\Documents\GitHub\cppsorts\x64\Debug\cppsorts.exe

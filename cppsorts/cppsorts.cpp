@@ -1,11 +1,22 @@
 #include <array>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 bool swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
+    return true;
+}
+
+bool isSorted(int arr[], int size) {
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < arr[i - 1]) {
+            return false;
+        }
+    }
+
     return true;
 }
 
@@ -63,11 +74,26 @@ int* insertionSort(int arr[], int size) {   //O(n^2)
     return arr;
 }
 
+int* bogoSort(int arr[], int size) {
+    int i = 0;
+    int j = 0;
+    srand(time(NULL));
+
+    while (!isSorted(arr,size)) {
+        i = rand() % size;
+        j = rand() % size;
+        if (i != j) {
+            swap(&arr[i], &arr[j]);
+        }
+    }
+    return arr;
+}
+
 int main() {
     int arr[] = { 0, 10, 9, -1, 2, 3 };
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    int* barr = insertionSort(arr, size);
+    int* barr = bogoSort(arr, size);
 
     for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
         printf("%d ", barr[i]);
