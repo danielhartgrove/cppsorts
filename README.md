@@ -5,11 +5,11 @@ a library for sorting algorithms in C++, written by Daniel Hartgrove
 - Bubble Sort
 - Selection Sort
 - Insertion Sort
+- Bogo Sort
 
 ### Planned Features
 - Merge Sort
 - Heap Sort
-- Bogo Sort
 - Data Structure Class (C-Style Array Wrapper for easy porting to C)
 
 ### How do I use `cppsorts`?
