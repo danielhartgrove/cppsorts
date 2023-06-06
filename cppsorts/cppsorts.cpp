@@ -13,9 +13,9 @@ int* bubbleSort(int arr[], int size) {
     bool swapped; // we use a flag variable to check if a swap has been made in
                   // the current iteration
 
-    for (int i = 0; i <= size; i++) {
+    for (int i = 0; i < size - 1; i++) {
         swapped = false;
-        for (int j = 0; j <= size - i; j++) {
+        for (int j = 0; j < size - i- 1; j++) {
             if (arr[j] > arr[j + 1]) {
                 swapped = swap(
                     &arr[j],
@@ -33,9 +33,9 @@ int* bubbleSort(int arr[], int size) {
 
 int* selectionSort(int arr[], int size) {
     int min;
-    for (int i = 0; i <= size; i++) {
+    for (int i = 0; i < size - 1; i++) {
         min = i;
-        for (int j = i + 1; j <= size; j++) {
+        for (int j = i + 1; j < size; j++) {
             if (arr[j] < arr[min]) {
                 min = j;
             }
@@ -47,13 +47,13 @@ int* selectionSort(int arr[], int size) {
 }
 
 int main() {
-    int arr[] = { 1, 2, 3 };
+    int arr[] = { 0, 10, 9, -1, 2, 3 };
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    bubbleSort(arr, size);
+    int* barr = selectionSort(arr, size);
 
     for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
-        printf("%d", arr[i]);
+        printf("%d ", barr[i]);
     }
 
     return 0;
