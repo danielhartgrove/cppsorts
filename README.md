@@ -1,5 +1,5 @@
 # cppsorts
-## a library for sorting algorithms in C++, written by Daniel Hartgrove
+a library for sorting algorithms in C++, written by Daniel Hartgrove
 
 ### Current Features
 - Bubble Sort
